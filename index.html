@@ -1,0 +1,127 @@
+<html>
+<head>
+    <title>Lucius's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <h3>Contents</h3>
+        <ul>
+            <li>About Me</li>
+            <li>Education</li>
+            <li>Contact Me</li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <header>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <h1>Hi, I am Lucius Khor.</h1>
+    </header>
+
+    <div class=container> 
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat natus blanditiis possimus deserunt optio culpa ipsum eligendi eius id, architecto quasi ex rerum eaque earum at molestiae accusantium consequatur.</p>
+        <img class=profile src="images/profile.jpg">
+    </div>
+
+    <hr>
+
+    <div class=container>
+        <h2>Skills</h2>
+        <div class="skill-card">
+            <div class="skill-item">Basic Programming</div>
+            <div class="skill-item">Video Editing</div>
+            <div class="skill-item">Reading and Reseach skills</div>
+            <div class="skill-item">Photography</div>
+            <div class="skill-item">Online Marketing</div>
+            <div class="skill-item">5</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class=container>
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Qualifications</th>
+                <th>Institute</th>
+                <th>Result</th>
+            </tr>
+            
+            <tr>
+                <td>2019</td>
+                <td>SPM</td>
+                <td>SMK Seafield</td>
+                <td>9A</td>
+            </tr>
+
+            <tr>
+                <td>2021</td>
+                <td>A Levels</td>
+                <td>Sunway College</td>
+                <td>4A</td>
+            </tr>
+
+            <tr>
+                <td>2026</td>
+                <td>Bachelor of Science in Mathematics</td>
+                <td>University Malaya</td>
+                <td>CGPA 3.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class=container>
+            <h2>Contact</h2>
+            <ul class=icons>
+                <li><a href="https://www.facebook.com/lucius.khor"><img src="images/facebook.png"></a></li>
+                <li><a href="https://wa.me/601116868110"><img src="images/whatsapp.png"></a></li>
+                <li><a href="https://www.instagram.com/lucius_kzy/"><img src="images/instagram.png"></a></li>
+                <li><a><img src="images/linkedin.png"></a></li>
+                <li><a href="mailto:lucius.kzy1111@gmail.com"><img src="images/gmail.png"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        let mode="light"
+        function toggleDarkMode(){
+            console.log('Dark Mode')
+            let elements = document.querySelectorAll("body > *:not(img)")
+            for (index=0;index<elements.length;index++){
+                elements[index].classList.toggle("dark-mode")
+            }
+            let body = document.querySelector("body")
+            body.classList.toggle("black-background")
+            console.log(body.classList)
+        }
+
+        function toggleLightMode(){
+            console.log('Light Mode')
+        }
+
+        let checkbox = document.querySelector('input[type="checkbox"]')
+        console.log(checkbox)
+        checkbox.addEventListener('change',()=>{
+        if (mode=="dark"){
+          toggleLightMode()
+          mode="light"
+        } else {
+          toggleDarkMode()
+          mode="dark"
+        }})
+
+        
+    </script>
+</body>
+</html>
